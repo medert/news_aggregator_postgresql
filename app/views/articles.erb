@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Aggregator</title>
+</head>
+  </head>
+
+  <body>
+    <h1>Here are the articles!</h1>
+
+    <ol>
+      <%@articles.each do |item|%>
+      <li><%=item["title"]%></li>
+    </ol>
+    <ul>
+      <li><%=item["description"]%></li>
+      <li><a href="<%= item["url"]%>"><%=item["url"]%></a></li>
+    </ul>
+      <%end%>
+  </body>
+</html>

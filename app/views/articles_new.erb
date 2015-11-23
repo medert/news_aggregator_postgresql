@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Aggregator</title>
+</head>
+  </head>
+
+  <body>
+    <h1>Add an article below</h1>
+
+    <ul>
+
+    </ul>
+    <form action="/articles/new" method="post">
+      <ul>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= @previous_title %>" required>
+      </ul>
+      <ul>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" value="<%= @previous_description %>" pattern=".{20,}" required title="20 characters or more">
+      </ul>
+      <ul>
+        <label for="url">URL</label>
+        <input type="text" id="url" name="url" value="<%= @previous_url %>" required>
+      </ul>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
